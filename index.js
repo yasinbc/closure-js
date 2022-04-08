@@ -40,3 +40,27 @@ myCount();//3
 const myOtherCount = buildCount(10);
 myOtherCount();//1
 myOtherCount();//11
+
+
+//DATOS PRIVADOS EN JS
+const person = () =>{
+    var saveName = "Name";
+    
+    return {
+        getName: ()=>{
+            return saveName;
+        },
+        setName: (name)=>{
+            saveName = name;
+        },
+    };
+};
+
+newPerson = person();
+console.log(newPerson.getName());
+newPerson.setName('Oscar');
+console.log(newPerson.getName());
+
+numero = 1;
+
+console.log(numero)
